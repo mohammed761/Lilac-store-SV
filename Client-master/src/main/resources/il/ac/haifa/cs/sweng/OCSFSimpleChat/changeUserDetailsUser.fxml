@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1300.0" style="-fx-background-color: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ChangeUserDetailsUserController">
+   <children>
+      <AnchorPane layoutX="75.0" layoutY="85.0" prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: linear-gradient(to right, #00c6ff, #0072ff); -fx-background-radius: 50;">
+         <children>
+            <HBox alignment="CENTER" layoutY="134.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Label fx:id="userDetailsErrorLabel" style="-fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="This username is already taken" visible="false">
+                     <font>
+                        <Font name="Cambria" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <MFXTextField fx:id="UsernameTB" floatingText="Username" layoutX="50.0" layoutY="170.0" onKeyReleased="#handleUserNameTB" prefHeight="50.0" prefWidth="250.0" promptText="violaovary" textLimit="24" />
+            <MFXTextField fx:id="EmailTB" floatingText="E-mail" layoutX="50.0" layoutY="235.0" onKeyReleased="#handleEmailTB" prefHeight="50.0" prefWidth="250.0" promptText="example@hotmail.com" textLimit="64" />
+            <MFXComboBox fx:id="phoneCodeList" floatingText="Phone Code" layoutX="50.0" layoutY="300.0" onAction="#handlePhoneCodeListSelected" onMouseClicked="#handlePhoneCodeList" prefHeight="50.0" prefWidth="120.0" promptText="050">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MFXComboBox>
+            <MFXTextField fx:id="PhoneTB" floatingText="Phone Number" layoutX="180.0" layoutY="300.0" onKeyReleased="#handlePhoneTB" prefHeight="50.0" prefWidth="120.0" promptText="1234567" textLimit="7" />
+            <MFXPasswordField fx:id="PasswordTB" floatingText="Password" layoutX="50.0" layoutY="365.0" onKeyReleased="#handlePasswordTB" prefHeight="50.0" prefWidth="250.0" promptText="&quot;5q4PAwt{{~be\K&quot;!uhnDC*2" textLimit="24" />
+            <MFXPasswordField fx:id="ConfirmPasswordTB" floatingText="Confirm Password" layoutX="50.0" layoutY="430.0" onKeyReleased="#handleConfirmPasswordTB" prefHeight="50.0" prefWidth="250.0" promptText="&quot;5q4PAwt{{~be\K&quot;!uhnDC*2" textLimit="24" />
+            <Label layoutX="82.0" layoutY="10.0" prefHeight="50.0" text="User Details" textFill="GOLD">
+               <font>
+                  <Font name="Cambria" size="36.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Label>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="150.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/User_Details.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="UserNameImage" fitHeight="15.0" fitWidth="15.0" layoutX="315.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/remove.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="PhoneImage" fitHeight="15.0" fitWidth="15.0" layoutX="315.0" layoutY="318.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/remove.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="EmailImage" fitHeight="15.0" fitWidth="15.0" layoutX="315.0" layoutY="253.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/remove.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="PasswordImage" fitHeight="15.0" fitWidth="15.0" layoutX="315.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/remove.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="ConfirmPasswordImage" fitHeight="15.0" fitWidth="15.0" layoutX="315.0" layoutY="448.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/remove.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="userNameQuestionMark" fitHeight="32.0" fitWidth="32.0" layoutX="260.0" layoutY="179.0" onMouseEntered="#handleUserNameQuestionMarkEnter" onMouseExited="#handleUserNameQuestionMarkExit" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/question_mark.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="passwordQuestionMark" fitHeight="32.0" fitWidth="32.0" layoutX="235.0" layoutY="375.0" onMouseEntered="#handlePasswordQuestionMarkEnter" onMouseExited="#handlePasswordQuestionMarkExit" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/question_mark.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="475.0" layoutY="85.0" prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: linear-gradient(to right, #00c6ff, #0072ff); -fx-background-radius: 50;">
+         <children>
+            <MFXTextField fx:id="CityTB" floatingText="City" layoutX="50.0" layoutY="170.0" onKeyReleased="#handleCityTB" prefHeight="50.0" prefWidth="250.0" promptText="Tel-Aviv" textLimit="25" />
+            <MFXTextField fx:id="StreetTB" floatingText="Street" layoutX="50.0" layoutY="236.0" onKeyReleased="#handleStreetTB" prefHeight="50.0" prefWidth="250.0" promptText="P.O.Box 23075 Il" textLimit="40" />
+            <MFXTextField fx:id="ZIPCTB" floatingText="ZIP Code" layoutX="50.0" layoutY="300.0" onKeyReleased="#handleZIPCTB" prefHeight="50.0" prefWidth="250.0" promptText="6329302" textLimit="7" />
+            <MFXTextField fx:id="POBoxTB" floatingText="Post Office Box" layoutX="50.0" layoutY="365.0" onKeyReleased="#handlePOBoxTB" prefHeight="50.0" prefWidth="250.0" promptText="1286 - optional" textLimit="4" />
+            <Label layoutX="112.0" layoutY="10.0" prefHeight="50.0" text="Address" textFill="GOLD">
+               <font>
+                  <Font name="Cambria" size="36.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Label>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="150.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/address.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="CityImage" fitHeight="15.0" fitWidth="15.0" layoutX="315.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/remove.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="StreetImage" fitHeight="15.0" fitWidth="15.0" layoutX="315.0" layoutY="253.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/remove.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="ZIPImage" fitHeight="15.0" fitWidth="15.0" layoutX="315.0" layoutY="318.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/remove.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="POBoxImage" fitHeight="15.0" fitWidth="15.0" layoutX="315.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/remove.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="875.0" layoutY="85.0" prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: linear-gradient(to right, #00c6ff, #0072ff); -fx-background-radius: 50;">
+         <children>
+            <MFXTextField fx:id="CreditCardNumberTB" cache="true" floatingText="Credit Card Number" layoutX="50.0" layoutY="170.0" onKeyReleased="#handleCreditCardNumberTB" prefHeight="50.0" prefWidth="250.0" promptText="4864 5820 9110 1315" textLimit="16" />
+            <MFXTextField fx:id="CreditCardHolderTB" floatingText="Credit Card Holder" layoutX="50.0" layoutY="235.0" onKeyReleased="#handleCreditCardHolderTB" prefHeight="50.0" prefWidth="250.0" promptText="Chloe Coffey" textLimit="30" />
+            <MFXComboBox fx:id="ExpDateMonthCB" floatingText="Exp. Date" layoutX="50.0" layoutY="300.0" onAction="#handleExpDateMonthCBSelected" onMouseClicked="#handleExpDateMonthCB" prefHeight="50.0" prefWidth="120.0" promptText="09">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MFXComboBox>
+            <MFXComboBox fx:id="ExpDateYearCB" floatingText="Exp. Date" layoutX="180.0" layoutY="300.0" onAction="#handleExpDateYearCBSelected" onMouseClicked="#handleExpDateYearCB" prefHeight="50.0" prefWidth="120.0" promptText="2025">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MFXComboBox>
+            <MFXTextField fx:id="CVVTB" floatingText="CVV" layoutX="50.0" layoutY="365.0" onKeyReleased="#handleCVVTB" prefHeight="50.0" prefWidth="120.0" promptText="656" textLimit="3" />
+            <JFXButton fx:id="cancelButton" layoutX="50.0" layoutY="430.0" onAction="#handleCancelButton" prefHeight="50.0" style="-fx-background-color: linear-gradient(to right, #e52d27, #b31217); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="CANCEL" textFill="#dad6d6">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label layoutX="65.0" layoutY="10.0" prefHeight="50.0" text="Payment Details" textFill="GOLD">
+               <font>
+                  <Font name="Cambria" size="36.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Label>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="150.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/credit-card.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="CreditCardNumberImage" fitHeight="15.0" fitWidth="15.0" layoutX="315.0" layoutY="185.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/remove.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="CreditCardHolderImage" fitHeight="15.0" fitWidth="15.0" layoutX="315.0" layoutY="253.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/remove.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="ExpDateImage" fitHeight="15.0" fitWidth="15.0" layoutX="315.0" layoutY="318.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/remove.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="CVVImage" fitHeight="15.0" fitWidth="15.0" layoutX="185.0" layoutY="383.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/remove.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="CreditCardNoCardImage" fitHeight="32.0" fitWidth="32.0" layoutX="260.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="CVVQuestionMark" fitHeight="32.0" fitWidth="32.0" layoutX="135.0" layoutY="374.0" onMouseEntered="#CVVQuestionMarkEnter" onMouseExited="#CVVQuestionMarkExit" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/question_mark.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ImageView>
+            <JFXButton fx:id="saveButton" layoutX="231.0" layoutY="430.0" onAction="#handleSaveButton" prefHeight="50.0" style="-fx-background-color: linear-gradient(to right, #000000, #0f9b0f); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="SAVE" textFill="#dad6d6">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <Label fx:id="showLabelUserName" layoutX="255.0" layoutY="205.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="● 8 - 24 letters.&#10;● letters, numbers, dots and _ only.&#10;● no consecutive _ and dots." visible="false">
+         <font>
+            <Font name="Cambria Bold" size="12.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Label>
+      <Label fx:id="showLabelPassword" layoutX="245.0" layoutY="367.0" style="-fx-background-color: white; -fx-background-radius: 10;" text="● 8 - 24 letters.&#10;● at least one small letter.&#10;● at least one capital letter.&#10;● at least one special symbol.&#10;● at least one number." visible="false">
+         <font>
+            <Font name="Cambria Bold" size="12.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Label>
+      <Label fx:id="showLabelCVV" layoutX="930.0" layoutY="430.0" style="-fx-background-color: white; -fx-background-radius: 3;" text="3 numbers on the back of the card." visible="false">
+         <font>
+            <Font name="Cambria Bold" size="12.0" />
+         </font>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Label>
+      <ImageView fx:id="homeSignUp" fitHeight="40.0" fitWidth="40.0" layoutX="607.0" layoutY="20.0" onMouseClicked="#handleHomeSignUp" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Image/home-icon-silhouette.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <HBox fx:id="successHbox" alignment="CENTER" layoutY="606.0" prefHeight="30.0" prefWidth="1300.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label fx:id="successLabel" style="-fx-text-fill: linear-gradient(to right, #000428, #004e92);" text="Your details have been updated successfully" textFill="GREEN" visible="false">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+               <effect>
+                  <Bloom threshold="0.0" />
+               </effect>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PrimaryManagerController">
+   <children>
+      <AnchorPane prefHeight="650.0" prefWidth="1300.0" style="-fx-background-color: linear-gradient(to right, #00c6ff, #0072ff);">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/logoutIcon.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="50.0" layoutY="14.0" style="-fx-text-fill: linear-gradient(to right, #ed213a, #93291e);" text="Logout">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+            </Label>
+            <VBox alignment="CENTER" layoutY="44.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label style="-fx-text-fill: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);" text="WELCOME BOSS">
+                           <font>
+                              <Font name="Cambria Bold" size="130.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <VBox alignment="CENTER">
+                     <children>
+                        <Label style="-fx-text-fill: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);" text="Choose histograms you would like to check">
+                           <font>
+                              <Font name="Cambria Bold" size="34.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <JFXButton buttonType="RAISED" onAction="#handleComplaintHistogram" prefWidth="325.0" style="-fx-background-color: linear-gradient(to right, #e52d27, #b31217); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="COMPLAINT HISTOGRAM">
+                                 <font>
+                                    <Font name="Cambria Bold" size="24.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXComboBox fx:id="singleShopComplaintCB" focusColor="GOLD" labelFloat="true" promptText="Shop" style="-jfx-focus-color: linear-gradient(to right, #e52d27, #b31217);" visibleRowCount="4">
+                                 <HBox.margin>
+                                    <Insets right="100.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXComboBox>
+                              <JFXButton buttonType="RAISED" onAction="#handleComplaintComparison" style="-fx-background-color: linear-gradient(to right, #e52d27, #b31217); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="COMPLAINT COMPARISON">
+                                 <font>
+                                    <Font name="Cambria Bold" size="24.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXComboBox fx:id="comparisonFirstShopComplaintCB" focusColor="GOLD" labelFloat="true" promptText="First shop" style="-jfx-focus-color: linear-gradient(to right, #e52d27, #b31217);" visibleRowCount="4">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </JFXComboBox>
+                              <JFXComboBox fx:id="comparisonSecondShopComplaintCB" focusColor="GOLD" labelFloat="true" promptText="Second Shop" style="-jfx-focus-color: linear-gradient(to right, #e52d27, #b31217);" visibleRowCount="4">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </JFXComboBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <JFXButton buttonType="RAISED" onAction="#handleProfitHistogram" prefWidth="325.0" style="-fx-background-color: linear-gradient(to right, #000428, #004e92); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="PROFIT HISTOGRAM">
+                                 <font>
+                                    <Font name="Cambria Bold" size="24.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXComboBox fx:id="singleShopProfitCB" focusColor="GOLD" labelFloat="true" promptText="Shop" style="-jfx-focus-color: linear-gradient(to right, #141e30, #243b55);" visibleRowCount="4">
+                                 <HBox.margin>
+                                    <Insets right="100.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXComboBox>
+                              <JFXButton buttonType="RAISED" onAction="#handleProfitComparison" prefWidth="325.0" style="-fx-background-color: linear-gradient(to right, #000428, #004e92); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="PROFIT COMPARISON">
+                                 <font>
+                                    <Font name="Cambria Bold" size="24.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXComboBox fx:id="comparisonFirstShopProfitCB" focusColor="GOLD" labelFloat="true" promptText="First shop" style="-jfx-focus-color: linear-gradient(to right, #141e30, #243b55);" visibleRowCount="4">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </JFXComboBox>
+                              <JFXComboBox fx:id="comparisonSecondShopProfitCB" focusColor="GOLD" labelFloat="true" promptText="Second Shop" style="-jfx-focus-color: linear-gradient(to right, #141e30, #243b55);" visibleRowCount="4">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </JFXComboBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="20.0" top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <JFXButton buttonType="RAISED" onAction="#handleOrdersHistogram" prefWidth="325.0" style="-fx-background-color: linear-gradient(to right, #000000, #0f9b0f); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="ORDERS HISTOGRAM">
+                                 <font>
+                                    <Font name="Cambria Bold" size="24.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <HBox.margin>
+                                    <Insets right="20.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXComboBox fx:id="singleShopOrdersCB" focusColor="GOLD" labelFloat="true" promptText="Shop" style="-jfx-focus-color: linear-gradient(to right, #000000, #0f9b0f);" visibleRowCount="4">
+                                 <HBox.margin>
+                                    <Insets right="100.0" />
+                                 </HBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXComboBox>
+                              <JFXButton buttonType="RAISED" onAction="#handleOrdersComparison" prefWidth="325.0" style="-fx-background-color: linear-gradient(to right, #000000, #0f9b0f); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="ORDERS COMPARISON">
+                                 <font>
+                                    <Font name="Cambria Bold" size="24.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <HBox.margin>
+                                    <Insets left="100.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXComboBox fx:id="comparisonFirstShopOrdersCB" focusColor="GOLD" labelFloat="true" promptText="First shop" style="-jfx-focus-color: linear-gradient(to right, #000000, #0f9b0f);" visibleRowCount="4">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </JFXComboBox>
+                              <JFXComboBox fx:id="comparisonSecondShopOrdersCB" focusColor="GOLD" labelFloat="true" promptText="Second Shop" style="-jfx-focus-color: linear-gradient(to right, #000000, #0f9b0f);" visibleRowCount="4">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </JFXComboBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER">
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <JFXButton buttonType="RAISED" onAction="#handleAllShopHistogram" prefWidth="400.0" style="-fx-background-color: linear-gradient(to right, #000000, #434343); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="ALL SHOPS HISTOGRAM">
+                                 <font>
+                                    <Font name="Cambria Bold" size="24.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXComboBox fx:id="allShopsHistogramTypeCB" focusColor="GOLD" labelFloat="true" promptText="Histogram type" style="-jfx-focus-color: linear-gradient(to right, #000000, #0f9b0f);" visibleRowCount="4">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <HBox.margin>
+                                    <Insets left="20.0" />
+                                 </HBox.margin>
+                              </JFXComboBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <Label style="-fx-text-fill: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);" text="If you would like to perform any other operation choose one of the below buttons">
+                     <font>
+                        <Font name="Cambria Bold" size="34.0" />
+                     </font>
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                  </Label>
+                  <HBox alignment="CENTER">
+                     <children>
+                        <JFXButton buttonType="RAISED" onAction="#handleEditCatalogue" style="-fx-background-color: linear-gradient(to right, #f7971e, #ffd200); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #000428, #004e92);" text="EDIT CATALOGUE">
+                           <font>
+                              <Font name="Cambria Bold" size="24.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" onAction="#handleShowComplaints" style="-fx-background-color: linear-gradient(to right, #f7971e, #ffd200); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #000428, #004e92);" text="SHOW COMPLAINTS">
+                           <font>
+                              <Font name="Cambria Bold" size="24.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" onAction="#handleShowSpecialOrders" style="-fx-background-color: linear-gradient(to right, #f7971e, #ffd200); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #000428, #004e92);" text="SHOW SPECIAL ORDERS">
+                           <font>
+                              <Font name="Cambria Bold" size="24.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" onAction="#handleShowUsers" style="-fx-background-color: linear-gradient(to right, #f7971e, #ffd200); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #000428, #004e92);" text="SHOW USERS">
+                           <font>
+                              <Font name="Cambria Bold" size="24.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+            <JFXButton layoutX="8.0" layoutY="7.0" onAction="#handleLogoutButton" prefHeight="36.0" prefWidth="102.0" style="-fx-text-fill: linear-gradient(to right, #ed213a, #93291e);">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

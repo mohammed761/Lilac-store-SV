@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.MotionBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" style="-fx-background-color: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EditAddItemSystemWorkerController">
+   <children>
+      <AnchorPane prefHeight="650.0" prefWidth="1300.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Label fx:id="titleLabel" style="-fx-text-fill: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);" text="ADD NEW PRODUCT">
+                     <font>
+                        <Font name="Cambria Bold" size="64.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox layoutY="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Pane prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <MFXTextField fx:id="productNameTB" floatingText="Product Name" layoutX="50.0" layoutY="18.0" onKeyPressed="#handleProductNameKeyPressed" onKeyReleased="#handleProductNameKeyReleased" prefWidth="1200.0" promptText="Charming Day">
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                        </MFXTextField>
+                        <ImageView fx:id="nameImage" fitHeight="30.0" fitWidth="30.0" layoutX="1210.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../../../../../../Image/remove.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <MFXTextField fx:id="productPriceTB" floatingText="Product Price" layoutX="50.0" layoutY="18.0" onKeyPressed="#handleProductPriceKeyPressed" onKeyReleased="#handleProductPriceKeyReleased" prefWidth="550.0" promptText="88.99">
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                        </MFXTextField>
+                        <ImageView fx:id="priceImage" fitHeight="30.0" fitWidth="30.0" layoutX="560.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../../../../../../Image/remove.png" />
+                           </image>
+                        </ImageView>
+                        <Separator layoutX="610.0" layoutY="49.0" prefWidth="80.0" style="-fx-background-color: white;">
+                           <effect>
+                              <MotionBlur />
+                           </effect>
+                        </Separator>
+                        <MFXTextField fx:id="productDiscountTB" floatingText="Product Discount" layoutX="700.0" layoutY="18.0" onKeyPressed="#handleProductDiscountKeyPressed" onKeyReleased="#handleProductDiscountKeyReleased" prefWidth="550.0" promptText="Only integers 0 - 100">
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                        </MFXTextField>
+                        <ImageView fx:id="discountImage" fitHeight="30.0" fitWidth="30.0" layoutX="1210.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../../../../../../Image/remove.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <MFXTextField fx:id="productSizeTB" floatingText="Product Size" layoutX="50.0" layoutY="18.0" onKeyPressed="#handleProductSizeKeyPressed" onKeyReleased="#handleProductSizeKeyReleased" prefWidth="1200.0" promptText="Approximately 20&quot; W x 24&quot; H">
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                        </MFXTextField>
+                        <ImageView fx:id="sizeImage" fitHeight="30.0" fitWidth="30.0" layoutX="1210.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../../../../../../Image/remove.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <MFXTextField fx:id="productDescriptionTB" floatingText="Product Description" layoutX="50.0" layoutY="18.0" onKeyPressed="#handleProductDescriptionKeyPressed" onKeyReleased="#handleProductDescriptionKeyReleased" prefWidth="1200.0" promptText="Premium long stem roses arranged in a glass vase and a box of chocolates">
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                        </MFXTextField>
+                        <ImageView fx:id="descriptionImage" fitHeight="30.0" fitWidth="30.0" layoutX="1210.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../../../../../../Image/remove.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fx:id="productImage" fitHeight="140.0" fitWidth="140.0" layoutX="50.0" layoutY="5.0" onMouseClicked="#handleUploadImage" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../Image/upload.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <JFXButton fx:id="cancelButton" buttonType="RAISED" layoutX="1020.0" layoutY="52.0" onAction="#handleCancelButton" style="-fx-background-color: linear-gradient(to right, #ed213a, #93291e); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="CANCEL">
+                           <font>
+                              <Font name="Cambria Bold" size="24.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton fx:id="doneButton" buttonType="RAISED" layoutX="1154.0" layoutY="52.0" onAction="#handleDoneButton" style="-fx-background-color: linear-gradient(to right, #11998e, #38ef7d); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="DONE">
+                           <font>
+                              <Font name="Cambria Bold" size="24.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <ColorPicker fx:id="productColor" layoutX="588.0" layoutY="52.0" onAction="#handleProductColor" prefHeight="46.0" style="-fx-background-color: linear-gradient(to right, #f4c4f3, #fc67fa);">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ColorPicker>
+                        <ImageView fx:id="imageImage" fitHeight="30.0" fitWidth="30.0" layoutX="210.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../../../../../../Image/remove.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="505.0" layoutY="14.0" style="-fx-text-fill: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);" text="Be sure to pick the color you desire">
+                           <font>
+                              <Font name="Cambria Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

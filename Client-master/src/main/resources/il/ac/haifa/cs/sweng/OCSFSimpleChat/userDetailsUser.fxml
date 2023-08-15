@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import io.github.palexdev.materialfx.controls.MFXDatePicker?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import io.github.palexdev.materialfx.controls.legacy.MFXLegacyComboBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" style="-fx-background-color: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.UserDetailsUserController">
+    <children>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1300.0">
+            <children>
+                <HBox alignment="CENTER" layoutY="20.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <children>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#handleHome" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../Image/home-icon-silhouette.png" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <AnchorPane layoutX="62.5" layoutY="125.0" prefHeight="400.0" prefWidth="350.0" style="-fx-background-color: linear-gradient(to right, #00c6ff, #0072ff); -fx-background-radius: 50;">
+                    <children>
+                        <MFXTextField fx:id="creditCardNumber" cache="true" editable="false" floatingText="Credit Card Number" layoutX="50.0" layoutY="140.0" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" textLimit="16">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </MFXTextField>
+                        <MFXTextField fx:id="creditCardHolder" editable="false" floatingText="Credit Card Holder" layoutX="50.0" layoutY="205.0" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" textLimit="30">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </MFXTextField>
+                        <MFXTextField fx:id="cvv" editable="false" floatingText="CVV" layoutX="50.0" layoutY="335.0" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" textLimit="3">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </MFXTextField>
+                        <HBox alignment="CENTER" layoutX="50.0" layoutY="14.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <children>
+                                <Label prefHeight="50.0" text="Payment Details" textFill="GOLD">
+                                    <font>
+                                        <Font name="Cambria" size="36.0" />
+                                    </font>
+                                    <effect>
+                                        <InnerShadow />
+                                    </effect>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="150.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../Image/credit-card.png" />
+                            </image>
+                        </ImageView>
+                        <MFXTextField fx:id="creditCardExpDate" editable="false" floatingText="Credit Card Exp. Date" layoutX="50.0" layoutY="270.0" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" textLimit="30">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </MFXTextField>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="887.5" layoutY="125.0" prefHeight="400.0" prefWidth="350.0" style="-fx-background-color: linear-gradient(to right, #00c6ff, #0072ff); -fx-background-radius: 50;">
+                    <children>
+                        <MFXTextField fx:id="city" editable="false" floatingText="City" layoutX="50.0" layoutY="140.0" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" textLimit="25">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </MFXTextField>
+                        <MFXTextField fx:id="street" editable="false" floatingText="Street" layoutX="50.0" layoutY="205.0" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" textLimit="40">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </MFXTextField>
+                        <MFXTextField fx:id="zip" editable="false" floatingText="ZIP Code" layoutX="50.0" layoutY="270.0" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" textLimit="7">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </MFXTextField>
+                        <MFXTextField fx:id="postOfficeBox" editable="false" floatingText="Post Office Box" layoutX="50.0" layoutY="335.0" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" textLimit="4">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </MFXTextField>
+                        <HBox alignment="CENTER" layoutX="112.0" layoutY="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <children>
+                                <Label prefHeight="50.0" text="Address" textFill="GOLD">
+                                    <font>
+                                        <Font name="Cambria" size="36.0" />
+                                    </font>
+                                    <effect>
+                                        <InnerShadow />
+                                    </effect>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="150.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../Image/address.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+                <HBox alignment="CENTER" layoutY="590.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <children>
+                        <JFXButton fx:id="editMyAccountInformationButton" onAction="#handleEditMyAccountInformation" style="-fx-background-color: linear-gradient(to right, #000000, #434343); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="EDIT MY ACCOUNT INFORMATION">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <font>
+                                <Font name="Cambria Bold" size="24.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets right="20.0" />
+                            </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="backToCartButton" onAction="#handleBackToCart" style="-fx-background-color: linear-gradient(to right, #000000, #434343); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="BACK TO CART">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <font>
+                                <Font name="Cambria Bold" size="24.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </JFXButton>
+                    </children>
+                </HBox>
+                <AnchorPane layoutX="475.0" layoutY="75.0" prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: linear-gradient(to right, #00c6ff, #0072ff); -fx-background-radius: 50;">
+                    <children>
+                        <MFXDatePicker fx:id="datePicker" editable="false" layoutX="50.0" layoutY="150.0" prefHeight="53.0" prefWidth="250.0">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </MFXDatePicker>
+                        <HBox alignment="CENTER" layoutX="112.0" layoutY="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <children>
+                                <Label prefHeight="50.0" text="Delivery Details" textFill="GOLD">
+                                    <font>
+                                        <Font name="Cambria" size="36.0" />
+                                    </font>
+                                    <effect>
+                                        <InnerShadow />
+                                    </effect>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <StackPane layoutX="150.0" layoutY="70.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <children>
+                                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../../../../../../Image/datePicker.png" />
+                                    </image>
+                                </ImageView>
+                            </children>
+                        </StackPane>
+                        <JFXCheckBox fx:id="courier" layoutX="50.0" layoutY="350.0" onAction="#handleCourier" style="-fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="Courier">
+                            <font>
+                                <Font name="Cambria Bold Italic" size="18.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </JFXCheckBox>
+                        <JFXCheckBox fx:id="pickupFromBranch" layoutX="50.0" layoutY="390.0" onAction="#handlePickUpFromBranch" style="-fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="Pickup From The Branch">
+                            <font>
+                                <Font name="Cambria Bold Italic" size="18.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </JFXCheckBox>
+                        <JFXButton fx:id="confirmButton" layoutX="50.0" layoutY="435.0" onAction="#handleConfirm" style="-fx-background-color: linear-gradient(to right, #000000, #434343); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="CONFIRM">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <font>
+                                <Font name="Cambria Bold" size="14.0" />
+                            </font>
+                        </JFXButton>
+                        <HBox alignment="TOP_RIGHT" layoutX="162.0" layoutY="439.0" prefHeight="19.0" prefWidth="137.0">
+                            <children>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <HBox alignment="CENTER_LEFT">
+                                 <children>
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #e52d27;" text="Final Price: ">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="finalPriceOriginalLabel" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #e52d27;" text="₪">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="finalPriceLabel" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #e52d27;" text="9989.99">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER_RIGHT">
+                                 <children>
+                                    <Text fx:id="finalPriceDiscountedLabel" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #e52d27;" text="₪" visible="false">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="discountedPriceText" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #e52d27;" text="9989.99" visible="false">
+                                       <font>
+                                          <Font name="Cambria Bold" size="14.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                            </children>
+                        </HBox>
+                        <MFXLegacyComboBox fx:id="hourPicker" layoutX="170.0" layoutY="297.0" lineColor="GOLD" prefHeight="24.0" prefWidth="130.0" visibleRowCount="4">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </MFXLegacyComboBox>
+                        <HBox alignment="CENTER" layoutY="120.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <children>
+                                <Label fx:id="deliveryErrorLabel" style="-fx-text-fill: linear-gradient(to right, #e52d27, #b31217);" text="Please choose the requested fields" visible="false">
+                                    <font>
+                                        <Font name="Cambria Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                  <MFXTextField fx:id="deliveryReceiverName" floatingText="delivery receiver name" layoutX="50.0" layoutY="220.0" prefHeight="48.0" prefWidth="250.0" textLimit="30" />
+                  <MFXTextField fx:id="deliveryReceiverPhone" floatingText="Phone" layoutX="50.0" layoutY="285.0" prefHeight="49.0" prefWidth="90.0" textLimit="10" />
+                  <JFXCheckBox fx:id="blessing" layoutX="210.0" layoutY="350.0" onAction="#handleBlessing" style="-fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="Blessing">
+                     <font>
+                        <Font name="Cambria Bold Italic" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXCheckBox>
+                    </children>
+                </AnchorPane>
+            <Pane fx:id="blessingPane" layoutX="544.0" layoutY="120.0" visible="false">
+               <children>
+                  <TextArea fx:id="blessingText" prefHeight="300.0" prefWidth="300.0" wrapText="true">
+                     <font>
+                        <Font name="Cambria" size="18.0" />
+                     </font>
+                  </TextArea>
+                  <JFXButton fx:id="doneButton" layoutX="217.0" layoutY="256.0" onAction="#handleDone" style="-fx-background-color: linear-gradient(to right, #000000, #434343); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="DONE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

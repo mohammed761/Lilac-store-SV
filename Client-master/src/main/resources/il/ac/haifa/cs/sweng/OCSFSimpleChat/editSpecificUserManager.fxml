@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1300.0" style="-fx-background-color: linear-gradient(to right, #00c6ff, #0072ff);" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.EditSpecificUserManagerController">
+   <children>
+      <AnchorPane layoutX="75.0" layoutY="85.0" prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: linear-gradient(to right, #8a2387, #e94057, #f27121); -fx-background-radius: 50;">
+         <children>
+            <HBox alignment="CENTER" layoutY="134.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Label fx:id="userDetailsErrorLabel" style="-fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="This username is already taken" visible="false">
+                     <font>
+                        <Font name="Cambria" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <MFXTextField fx:id="username" floatingText="Username" layoutX="50.0" layoutY="170.0" prefHeight="50.0" prefWidth="250.0" promptText="violaovary" textLimit="24" />
+            <MFXTextField fx:id="email" floatingText="E-mail" layoutX="50.0" layoutY="235.0" prefHeight="50.0" prefWidth="250.0" promptText="example@hotmail.com" textLimit="64" />
+            <MFXComboBox fx:id="phoneCode" floatingText="Phone Code" layoutX="50.0" layoutY="300.0" onMouseClicked="#handlePhoneCode" prefHeight="50.0" prefWidth="120.0" promptText="050">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MFXComboBox>
+            <MFXTextField fx:id="phoneNumber" floatingText="Phone Number" layoutX="180.0" layoutY="300.0" prefHeight="50.0" prefWidth="120.0" promptText="1234567" textLimit="7" />
+            <MFXPasswordField fx:id="password" floatingText="Password" layoutX="50.0" layoutY="365.0" prefHeight="50.0" prefWidth="250.0" promptText="&quot;5q4PAwt{{~be\K&quot;!uhnDC*2" textLimit="24" />
+            <Label layoutX="82.0" layoutY="10.0" prefHeight="50.0" text="User Details" textFill="GOLD">
+               <font>
+                  <Font name="Cambria" size="36.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Label>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="150.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/User_Details.png" />
+               </image>
+            </ImageView>
+            <MFXComboBox fx:id="accountType" floatingText="Account Type" layoutX="50.0" layoutY="430.0" onMouseClicked="#handleAccountType" prefHeight="50.0" prefWidth="250.0" promptText="customer service">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MFXComboBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="475.0" layoutY="85.0" prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: linear-gradient(to right, #8a2387, #e94057, #f27121); -fx-background-radius: 50;">
+         <children>
+            <MFXTextField fx:id="city" floatingText="City" layoutX="50.0" layoutY="170.0" prefHeight="50.0" prefWidth="250.0" promptText="Tel-Aviv" textLimit="25" />
+            <MFXTextField fx:id="street" floatingText="Street" layoutX="50.0" layoutY="236.0" prefHeight="50.0" prefWidth="250.0" promptText="P.O.Box 23075 Il" textLimit="40" />
+            <MFXTextField fx:id="zipCode" floatingText="ZIP Code" layoutX="50.0" layoutY="300.0" prefHeight="50.0" prefWidth="250.0" promptText="6329302" textLimit="7" />
+            <MFXTextField fx:id="postOfficeBox" floatingText="Post Office Box" layoutX="50.0" layoutY="365.0" prefHeight="50.0" prefWidth="250.0" promptText="1286 - optional" textLimit="4" />
+            <Label layoutX="112.0" layoutY="10.0" prefHeight="50.0" text="Address" textFill="GOLD">
+               <font>
+                  <Font name="Cambria" size="36.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Label>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="150.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/address.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="875.0" layoutY="85.0" prefHeight="500.0" prefWidth="350.0" style="-fx-background-color: linear-gradient(to right, #8a2387, #e94057, #f27121); -fx-background-radius: 50;">
+         <children>
+            <MFXTextField fx:id="creditCardNumber" cache="true" floatingText="Credit Card Number" layoutX="50.0" layoutY="170.0" onKeyReleased="#handleCreditCardNumber" prefHeight="50.0" prefWidth="250.0" promptText="4864 5820 9110 1315" textLimit="16" />
+            <MFXTextField fx:id="creditCardHolder" floatingText="Credit Card Holder" layoutX="50.0" layoutY="235.0" prefHeight="50.0" prefWidth="250.0" promptText="Chloe Coffey" textLimit="30" />
+            <MFXComboBox fx:id="expDateMonth" floatingText="Exp. Date" layoutX="50.0" layoutY="300.0" onMouseClicked="#handleExpDateMonth" prefHeight="50.0" prefWidth="120.0" promptText="09">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MFXComboBox>
+            <MFXComboBox fx:id="expDateYear" floatingText="Exp. Date" layoutX="180.0" layoutY="300.0" onMouseClicked="#handleExpDateYear" prefHeight="50.0" prefWidth="120.0" promptText="2025">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MFXComboBox>
+            <MFXTextField fx:id="cvv" floatingText="CVV" layoutX="50.0" layoutY="365.0" prefHeight="50.0" prefWidth="120.0" promptText="656" textLimit="3" />
+            <Label layoutX="65.0" layoutY="10.0" prefHeight="50.0" text="Payment Details" textFill="GOLD">
+               <font>
+                  <Font name="Cambria" size="36.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Label>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="150.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/credit-card.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="creditCardNumberImage" fitHeight="32.0" fitWidth="32.0" layoutX="260.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true" />
+            <JFXButton fx:id="cancel" layoutX="50.0" layoutY="430.0" onAction="#handleCancel" prefHeight="50.0" style="-fx-background-color: linear-gradient(to right, #e52d27, #b31217); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="CANCEL" textFill="#dad6d6">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="save" layoutX="231.0" layoutY="430.0" onAction="#handleSave" prefHeight="50.0" style="-fx-background-color: linear-gradient(to right, #000000, #0f9b0f); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="SAVE" textFill="#dad6d6">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <HBox alignment="CENTER" layoutY="606.0" prefHeight="30.0" prefWidth="1300.0">
+         <children>
+            <Label fx:id="successLabel" style="-fx-text-fill: linear-gradient(to right, #000428, #004e92);" text="Your details have been updated successfully" textFill="GREEN">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+               <effect>
+                  <Bloom threshold="0.0" />
+               </effect>
+            </Label>
+         </children>
+      </HBox>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="607.0" layoutY="20.0" onMouseClicked="#handleHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Image/home-icon-silhouette.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1300.0" style="-fx-background-color: linear-gradient(to right, #00c6ff, #0072ff);" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SignInController">
+   <children>
+      <AnchorPane layoutX="800.0" layoutY="125.0" prefHeight="400.0" prefWidth="350.0" style="-fx-background-color: linear-gradient(to right, #8a2387, #e94057, #f27121); -fx-background-radius: 50;">
+         <children>
+            <JFXButton layoutX="49.0" layoutY="330.0" onAction="#handleSignInButton" prefWidth="250.0" style="-fx-background-color: linear-gradient(to right, #cb2d3e, #ef473a); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="Sign In" textFill="#dad6d6">
+               <effect>
+                  <Bloom threshold="0.0" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label layoutX="122.0" layoutY="5.0" text="Sign In" textFill="GOLD">
+               <font>
+                  <Font name="Cambria" size="36.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Label>
+            <MFXTextField fx:id="userNameTB" floatingText="Username" layoutX="49.0" layoutY="150.0" onAction="#handleUserNameEnter" prefWidth="250.0" promptText="example@hotmail.com" />
+            <ImageView fitHeight="150.0" fitWidth="50.0" layoutX="150.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/antique-key-tool.png" />
+               </image>
+            </ImageView>
+            <MFXPasswordField fx:id="passwordTB" floatingText="Password" layoutX="49.0" layoutY="240.0" onAction="#handlePasswordEnter" prefWidth="250.0" promptText="uwc]6c!R65&lt;@JjDBQ?!G=[8(" />
+            <Label layoutX="61.0" layoutY="370.0" text="Forgot Username or Password?" textFill="WHITE">
+               <font>
+                  <Font name="Cambria" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="227.0" layoutY="370.0" onMouseClicked="#handleContactUs" text="Contact US!" textFill="#006fff" underline="true">
+               <font>
+                  <Font name="Cambria Bold" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <HBox alignment="CENTER" layoutY="114.0" prefHeight="30.0" prefWidth="350.0">
+               <children>
+                  <Label fx:id="errorMessageLabel" text="The username / password is wrong, please try again" textAlignment="CENTER" textFill="RED">
+                     <font>
+                        <Font name="Cambria Bold" size="14.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <VBox prefHeight="650.0" prefWidth="650.0" style="-fx-background-color: linear-gradient(to right, #ed213a, #93291e);" />
+      <Label layoutX="92.0" layoutY="200.0" text="Don't Have An Account? No Problem&#10;Sign Up Now And Enjoy Our&#10;Variety Of Features" textAlignment="CENTER" textFill="GOLD">
+         <font>
+            <Font name="Cambria" size="30.0" />
+         </font>
+         <effect>
+            <Bloom threshold="0.0" />
+         </effect>
+      </Label>
+      <JFXButton layoutX="248.0" layoutY="330.0" onAction="#handleSignUpButton" prefHeight="44.0" prefWidth="153.0" style="-fx-background-color: linear-gradient(to right, #cb2d3e, #ef473a); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="Sign Up" textFill="#dad6d6">
+         <effect>
+            <Bloom threshold="0.0" />
+         </effect>
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="630.0" layoutY="20.0" onMouseClicked="#handleHomeSignIn" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Image/home-icon-silhouette.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

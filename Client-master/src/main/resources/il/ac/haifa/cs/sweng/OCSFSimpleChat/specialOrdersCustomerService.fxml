@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" style="-fx-background-color: linear-gradient(to right, #e65c00, #f9d423);" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SpecialOrdersCustomerServiceController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1300.0">
+         <children>
+            <HBox alignment="CENTER" layoutY="20.0" prefHeight="40.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" onMouseClicked="#handleHome" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Image/home-icon-silhouette.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="60.0" prefHeight="100.0">
+               <children>
+                  <Label fx:id="totalOrdersLabel" style="-fx-text-fill: linear-gradient(to right, #e0eafc, #cfdef3);" text="Total Orders: 0">
+                     <font>
+                        <Font name="Cambria Bold" size="24.0" />
+                     </font>
+                     <effect>
+                        <Bloom />
+                     </effect>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutY="160.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="310.0">
+                     <children>
+                        <Label style="-fx-text-fill: linear-gradient(to right, #000428, #004e92);" text="Email">
+                           <font>
+                              <Font name="Cambria Bold" size="24.0" />
+                           </font>
+                           <effect>
+                              <Bloom />
+                           </effect>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="664.0">
+                     <children>
+                        <Label style="-fx-text-fill: linear-gradient(to right, #000428, #004e92);" text="Special Item Description">
+                           <font>
+                              <Font name="Cambria Bold" size="24.0" />
+                           </font>
+                           <effect>
+                              <Bloom />
+                           </effect>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="310.0" />
+               </children>
+            </HBox>
+            <MFXScrollPane hbarPolicy="NEVER" layoutY="250.0" prefHeight="400.0" prefWidth="1300.0" style="-fx-background-color: transparent;" vbarPolicy="ALWAYS">
+               <content>
+                  <VBox fx:id="vbox" />
+               </content>
+            </MFXScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1300.0" style="-fx-background-color: linear-gradient(to right, #e65c00, #f9d423);" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PrimaryCustomerServiceController">
+   <children>
+      <VBox layoutY="70.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label style="-fx-text-fill: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);" text="WELCOME">
+                     <font>
+                        <Font name="Cambria Bold" size="250.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label style="-fx-text-fill: linear-gradient(to right, #e52d27, #b31217);" text="Please pick one of the options down below">
+                     <font>
+                        <Font name="Cambria Bold" size="36.0" />
+                     </font>
+                     <effect>
+                        <Reflection />
+                     </effect>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <JFXButton buttonType="RAISED" onAction="#handleShowComplaints" style="-fx-background-color: linear-gradient(to right, #000428, #004e92); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="SHOW COMPLAINTS">
+                     <font>
+                        <Font name="Cambria Bold" size="24.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" onAction="#handleSpecialOrders" style="-fx-background-color: linear-gradient(to right, #bc4e9c, #f80759); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="SHOW SPECIAL ORDERS">
+                     <font>
+                        <Font name="Cambria Bold" size="24.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Image/logoutIcon.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="50.0" layoutY="14.0" style="-fx-text-fill: linear-gradient(to right, #ed213a, #93291e);" text="Logout">
+         <font>
+            <Font name="Cambria Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="8.0" layoutY="7.0" onAction="#handleLogoutButton" prefHeight="36.0" prefWidth="102.0" style="-fx-text-fill: linear-gradient(to right, #ed213a, #93291e);">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="backToManager" buttonType="RAISED" layoutX="525.0" layoutY="17.0" onAction="#handleBackToManager" style="-fx-background-color: linear-gradient(to right, #000000, #434343); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="BACK TO MANAGER">
+         <font>
+            <Font name="Cambria Bold" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" style="-fx-background-color: linear-gradient(to right, #e65c00, #f9d423);" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.RespondToSpecialOrderCustomerServiceController">
+   <children>
+      <AnchorPane prefHeight="650.0" prefWidth="1300.0">
+         <children>
+            <HBox alignment="CENTER" layoutX="550.0" layoutY="580.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <JFXButton fx:id="cancelButton" onAction="#handleCancelButton" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right, #cb2d3e, #ef473a); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="CANCEL" textFill="WHITE">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="sendButton" onAction="#handleSendRespondButton" prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right, #11998e, #38ef7d); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="SEND RESPOND" textFill="WHITE">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </JFXButton>
+               </children>
+            </HBox>
+            <TextField fx:id="emailTB" editable="false" layoutX="75.0" layoutY="80.0" prefHeight="60.0" prefWidth="1150.0">
+               <font>
+                  <Font name="Cambria" size="18.0" />
+               </font>
+            </TextField>
+            <TextArea fx:id="respondTB" layoutX="75.0" layoutY="380.0" onKeyPressed="#handleRespondTBKeyPressed" onKeyReleased="#handleRespondTBKeyReleased" prefHeight="180.0" prefWidth="1150.0" promptText="Your Respond" wrapText="true">
+               <font>
+                  <Font name="Cambria" size="18.0" />
+               </font>
+            </TextArea>
+            <HBox alignment="CENTER_LEFT" layoutX="1070.0" layoutY="530.0" prefHeight="30.0" prefWidth="135.0">
+               <children>
+                  <Label fx:id="charactersLeftLabel" text="Charecters Left: 850" textFill="GREEN">
+                     <font>
+                        <Font name="Cambria Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="1185.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/acceptIcon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="1185.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/acceptIcon.png" />
+               </image>
+            </ImageView>
+            <HBox alignment="CENTER" layoutX="75.0" layoutY="445.0" prefHeight="50.0" prefWidth="1150.0">
+               <children>
+                  <Label fx:id="messageErrorLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="900.0" text="MESSAGE MUST CONTAIN AT LEAST 30 CHARACTERS" textAlignment="CENTER" textFill="RED">
+                     <font>
+                        <Font name="Cambria Bold" size="36.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Label>
+               </children>
+            </HBox>
+            <TextArea fx:id="notificationTB" editable="false" layoutX="75.0" layoutY="170.0" prefHeight="180.0" prefWidth="1150.0" wrapText="true">
+               <font>
+                  <Font name="Cambria" size="18.0" />
+               </font>
+            </TextArea>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="630.0" layoutY="20.0" onMouseClicked="#handleHome" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/home-icon-silhouette.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

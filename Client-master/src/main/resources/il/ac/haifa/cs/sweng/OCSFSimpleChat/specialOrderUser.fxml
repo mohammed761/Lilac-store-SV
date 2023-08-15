@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SpecialOrderUserController">
+   <center>
+      <AnchorPane prefHeight="650.0" prefWidth="1300.0" style="-fx-background-color: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="630.0" layoutY="20.0" onMouseClicked="#handleHome" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/home-icon-silhouette.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Pane layoutX="235.0" layoutY="100.0" prefHeight="200.0" prefWidth="0.0" style="-fx-background-color: linear-gradient(to right, #F37335, #FDC830);" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <JFXComboBox fx:id="chooseContainer" labelFloat="true" layoutX="25.0" layoutY="20.0" prefWidth="200.0" promptText="Choose Container" visibleRowCount="4">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXComboBox>
+                  <JFXComboBox fx:id="numberOfFlowers" labelFloat="true" layoutX="287.5" layoutY="20.0" prefWidth="200.0" promptText="Number Of Products">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXComboBox>
+                  <JFXComboBox fx:id="boxOfChocolate" labelFloat="true" layoutX="550.0" layoutY="20.0" prefWidth="200.0" promptText="Contains A Box Of Chocolates">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXComboBox>
+                  <JFXComboBox fx:id="teddyBear" labelFloat="true" layoutX="812.5" layoutY="20.0" prefWidth="200.0" promptText="Contains A Teddy Bear">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXComboBox>
+                  <JFXComboBox fx:id="blessingMessage" labelFloat="true" layoutX="1075.0" layoutY="20.0" prefWidth="200.0" promptText="Blessing Message">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXComboBox>
+                  <Label layoutX="25.0" layoutY="70.0" style="-fx-text-fill: linear-gradient(to right, #cac531, #f3f9a7);" text="Please choose types of flowers you would like to contain:" textFill="WHITE">
+                     <font>
+                        <Font name="Cambria" size="14.0" />
+                     </font>
+                     <effect>
+                        <Reflection>
+                           <input>
+                              <Bloom />
+                           </input>
+                        </Reflection>
+                     </effect>
+                  </Label>
+                  <JFXCheckBox fx:id="rosesCB" layoutX="380.0" layoutY="70.0" style="-fx-text-fill: linear-gradient(to right, #ed213a, #93291e);" text="Roses">
+                     <font>
+                        <Font name="Cambria Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="longStemmedRosesCB" layoutX="487.0" layoutY="70.0" style="-fx-text-fill: linear-gradient(to right, #ed213a, #93291e);" text="Long-stemmed Roses">
+                     <font>
+                        <Font name="Cambria Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="lavenderCB" layoutX="680.0" layoutY="70.0" style="-fx-text-fill: linear-gradient(to right, #ed213a, #93291e);" text="Lavender Roses">
+                     <font>
+                        <Font name="Cambria Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="carnationsCB" layoutX="848.0" layoutY="70.0" style="-fx-text-fill: linear-gradient(to right, #ed213a, #93291e);" text="Carnations">
+                     <font>
+                        <Font name="Cambria Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="monteCasinoCB" layoutX="978.0" layoutY="70.0" style="-fx-text-fill: linear-gradient(to right, #ed213a, #93291e);" text="Monte Casino">
+                     <font>
+                        <Font name="Cambria Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="lisianthusCB" layoutX="1128.0" layoutY="70.0" style="-fx-text-fill: linear-gradient(to right, #ed213a, #93291e);" text="Lisianthus">
+                     <font>
+                        <Font name="Cambria Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="gerberaCB" layoutX="380.0" layoutY="100.0" style="-fx-text-fill: linear-gradient(to right, #ed213a, #93291e);" text="Gerbera">
+                     <font>
+                        <Font name="Cambria Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="daisiesCB" layoutX="848.0" layoutY="100.0" style="-fx-text-fill: linear-gradient(to right, #ed213a, #93291e);" text="Daisies">
+                     <font>
+                        <Font name="Cambria Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="seasonalFlowersCB" layoutX="487.0" layoutY="100.0" style="-fx-text-fill: linear-gradient(to right, #ed213a, #93291e);" text="Seasonal Flowers">
+                     <font>
+                        <Font name="Cambria Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="greenFoliageCB" layoutX="679.0" layoutY="100.0" style="-fx-text-fill: linear-gradient(to right, #ed213a, #93291e);" text="Green Foliage">
+                     <font>
+                        <Font name="Cambria Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="alstroemeriaCB" layoutX="978.0" layoutY="100.0" style="-fx-text-fill: linear-gradient(to right, #ed213a, #93291e);" text="Alstroemeria">
+                     <font>
+                        <Font name="Cambria Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXCheckBox>
+                  <JFXCheckBox fx:id="liliesCB" layoutX="1128.0" layoutY="100.0" style="-fx-text-fill: linear-gradient(to right, #ed213a, #93291e);" text="Lilies">
+                     <font>
+                        <Font name="Cambria Bold" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXCheckBox>
+                  <Label layoutX="25.0" layoutY="150.0" style="-fx-text-fill: linear-gradient(to right, #cac531, #f3f9a7);" text="If you would like any other type please let us know:" textFill="WHITE">
+                     <font>
+                        <Font name="Cambria" size="14.0" />
+                     </font>
+                     <effect>
+                        <Reflection>
+                           <input>
+                              <Bloom />
+                           </input>
+                        </Reflection>
+                     </effect>
+                  </Label>
+                  <TextArea fx:id="anotherFlowerTA" layoutX="380.0" layoutY="134.0" prefHeight="50.0" prefWidth="400.0" wrapText="true">
+                     <font>
+                        <Font name="Cambria" size="14.0" />
+                     </font>
+                  </TextArea>
+                  <Label fx:id="messageErrorLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="794.0" layoutY="134.0" prefHeight="50.0" text="MAXIMUM 4 ITEMS" textAlignment="CENTER" textFill="RED" visible="false">
+                     <font>
+                        <Font name="Cambria Bold" size="36.0" />
+                     </font>
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutY="300.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right, #59c173, #a17fe0, #5d26c1);" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Label layoutX="73.0" layoutY="30.0" style="-fx-text-fill: linear-gradient(to right, #40e0d0, #ff8c00, #ff0080);" text="Please choose the price range you desire as well as the dominant color&#10;However, notice that if the price is found to be too cheap according to your chosen characteristics it will be refused" textAlignment="CENTER">
+                     <font>
+                        <Font name="Cambria Bold" size="22.0" />
+                     </font>
+                     <effect>
+                        <Bloom>
+                           <input>
+                              <Reflection />
+                           </input>
+                        </Bloom>
+                     </effect>
+                  </Label>
+                  <JFXComboBox fx:id="desiredPrice" labelFloat="true" layoutX="300.0" layoutY="130.0" prefWidth="200.0" promptText="Choose Desired Price" visibleRowCount="4">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXComboBox>
+                  <ColorPicker fx:id="colorPicker" layoutX="800.0" layoutY="130.0" onAction="#handleColorPicker" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right, #f4c4f3, #fc67fa);">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></ColorPicker>
+               </children>
+            </Pane>
+            <JFXButton fx:id="placeOrderRequestButton" layoutX="525.0" layoutY="545.0" onAction="#handlePlaceOrderButton" prefHeight="60.0" prefWidth="250.0" style="-fx-background-color: linear-gradient(to right, #cb2d3e, #ef473a); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="PLACE ORDER REQUEST" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Cambria Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label fx:id="messageErrorLabel1" alignment="CENTER" contentDisplay="CENTER" layoutX="800.0" layoutY="550.0" prefHeight="50.0" text="PLEASE FILL ALL FIELDS" textAlignment="CENTER" textFill="RED" visible="false">
+               <font>
+                  <Font name="Cambria Bold" size="36.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Label>
+            <Label fx:id="messageErrorLabel2" alignment="CENTER" contentDisplay="CENTER" layoutX="98.0" layoutY="550.0" prefHeight="50.0" text="PLEASE FILL ALL FIELDS" textAlignment="CENTER" textFill="RED" visible="false">
+               <font>
+                  <Font name="Cambria Bold" size="36.0" />
+               </font>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

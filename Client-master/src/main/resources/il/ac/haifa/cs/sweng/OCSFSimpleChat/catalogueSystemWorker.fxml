@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1250.0" style="-fx-background-color: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CatalogueSystemWorkerController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox prefHeight="200.0" prefWidth="435.0" style="-fx-background-color: linear-gradient(to right, #fceabb, #f8b500);" styleClass="right-bar" stylesheets="@../../../../../../Styles/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="110.0" prefWidth="200.0">
+                     <children>
+                        <Label style="-fx-text-fill: linear-gradient(to right, #f4c4f3, #fc67fa);" styleClass="shadow" stylesheets="@../../../../../../Styles/style.css" text="Product Details">
+                           <font>
+                              <Font name="Cambria Bold" size="40.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" stylesheets="@../../../../../../Styles/style.css">
+                     <VBox.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </VBox.margin>
+                     <children>
+                        <TextField fx:id="searchItemTB" onKeyPressed="#searchItemTBKeyPressed" onKeyReleased="#searchItemTBKeyReleased" prefHeight="40.0" prefWidth="235.0" promptText="Search Product..." styleClass="transparent" stylesheets="@../../../../../../Styles/style.css">
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                        </TextField>
+                        <JFXButton disable="true" prefHeight="47.0" prefWidth="73.0" styleClass="shadow" stylesheets="@../../../../../../Styles/style.css" textFill="#dad6d6" visible="false">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                           <effect>
+                              <Bloom threshold="0.65" />
+                           </effect>
+                        </JFXButton>
+                     </children>
+                     <styleClass>
+                        <String fx:value="search-box" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </HBox>
+                  <VBox fx:id="chosenItem" alignment="CENTER" prefHeight="600.0" prefWidth="335.0" stylesheets="@../../../../../../Styles/style.css">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets bottom="10.0" left="50.0" right="50.0" top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="335.0">
+                           <children>
+                              <ImageView fx:id="chosenItemImage" fitHeight="170.0" fitWidth="285.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../Image/Multicoloured_Aroma.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="53.0" prefWidth="335.0">
+                           <children>
+                              <Label fx:id="chosenItemName" prefHeight="60.0" prefWidth="335.0" text="Multicoloured Aroma" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="24.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="57.0" prefWidth="335.0">
+                           <children>
+                              <Label prefHeight="60.0" text="Price: " textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="24.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Text fx:id="chosenItemPrice" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="\$100.99" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Cambria" size="24.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Text fx:id="discountedItemPrice" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="\$100.99" textAlignment="CENTER" visible="false">
+                                 <font>
+                                    <Font name="Cambria" size="24.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="10.0" top="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="60.0" prefWidth="335.0">
+                           <children>
+                              <Label fx:id="chosenItemSize" prefHeight="60.0" prefWidth="336.0" text="Approximately 10” W x 11” H." textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria" size="24.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <HBox.margin>
+                                    <Insets bottom="5.0" left="5.0" top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="102.0" prefWidth="335.0">
+                           <children>
+                              <Label fx:id="chosenItemDetails" prefHeight="113.0" prefWidth="325.0" text="Arrangement of daisies, peruvian lilies,&#10;gerberas and chrysanthemums along with&#10;a vase" textFill="WHITE" wrapText="true" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font name="Cambria" size="18.0" />
+                                 </font>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
+                           <children>
+                              <JFXButton onAction="#handleEditButton" style="-fx-background-radius: 100; -fx-background-color: linear-gradient(to right, #f7971e, #ffd200); -fx-text-fill: linear-gradient(to right, #0f2027, #203a43, #2c5364);" text="EDIT">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <HBox.margin>
+                                    <Insets right="50.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                              <JFXButton onAction="#handleDeleteButton" style="-fx-background-radius: 100; -fx-background-color: linear-gradient(to right, #ed213a, #93291e); -fx-text-fill: linear-gradient(to right, #f7971e, #ffd200);" text="DELETE">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <HBox.margin>
+                                    <Insets left="50.0" />
+                                 </HBox.margin>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                     <styleClass>
+                        <String fx:value="chosen-fruit-card" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </VBox>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="93.0" prefWidth="880.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label style="-fx-text-fill: linear-gradient(to right, #f4c4f3, #fc67fa);" styleClass="shadow" stylesheets="@../../../../../../Styles/style.css" text="Language: " textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label style="-fx-text-fill: linear-gradient(to right, #f4c4f3, #fc67fa);" styleClass="shadow" stylesheets="@../../../../../../Styles/style.css" text="English" textFill="WHITE" underline="true">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Pane prefHeight="93.0" prefWidth="349.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <ImageView fx:id="homeCatalog" fitHeight="40.0" fitWidth="40.0" layoutX="187.0" layoutY="27.0" onMouseClicked="#handleHomeCatalog" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../Image/home-icon-silhouette.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="currentPageName" prefHeight="22.0" style="-fx-text-fill: linear-gradient(to right, #f4c4f3, #fc67fa);" styleClass="shadow" stylesheets="@../../../../../../Styles/style.css" text="Catalogue" textFill="WHITE">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ImageView fx:id="currentPageIcon" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../Image/Catalog_Icon.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="105.0" prefWidth="370.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="270.0" style="-fx-background-color: linear-gradient(to right, #03001e, #7303c0, #ec38bc, #fdeff9);" styleClass="free-delivery-card" stylesheets="@../../../../../../Styles/style.css">
+                                 <children>
+                                    <Label styleClass="shadow" stylesheets="@../../../../../../Styles/style.css" text="Satisfaction&#10;Guarantee" textAlignment="CENTER" textFill="#878787">
+                                       <font>
+                                          <Font name="Cambria Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                       <HBox.margin>
+                                          <Insets left="100.0" />
+                                       </HBox.margin>
+                                       <image>
+                                          <Image url="@../../../../../../Image/Satisfaction_Guarantee.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <JFXButton layoutX="18.0" layoutY="33.0" onAction="#handleAddItemButton" style="-fx-background-radius: 100; -fx-background-color: linear-gradient(to right, #00bf8f, #001510); -fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="ADD ITEM">
+                                 <font>
+                                    <Font name="Cambria Bold" size="18.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                           </children>
+                        </Pane>
+                        <VBox prefHeight="105.0" prefWidth="370.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="270.0" style="-fx-background-color: linear-gradient(to right, #000046, #1cb5e0);" styleClass="shopping-online-card" stylesheets="@../../../../../../Styles/style.css">
+                                 <children>
+                                    <Label styleClass="shadow" stylesheets="@../../../../../../Styles/style.css" text="High Quality&#10;And Design" textAlignment="CENTER" textFill="#878787">
+                                       <font>
+                                          <Font name="Cambria Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../Image/Quality_Icon.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets left="100.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <MFXScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefWidth="754.0" style="-fx-background-color: transparent;">
+                           <content>
+                              <GridPane fx:id="gridPane" prefHeight="0.0" prefWidth="0.0">
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </content>
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </MFXScrollPane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.MotionBlur?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1300.0" style="-fx-background-color: linear-gradient(to right, #00c6ff, #0072ff);" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SignUpAccountTypeController">
+   <children>
+      <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="630.0" layoutY="20.0" onMouseClicked="#handleHomeButton" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../Image/home-icon-silhouette.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <HBox alignment="CENTER" layoutY="100.0" prefHeight="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label style="-fx-text-fill: linear-gradient(to right, #f12711, #f5af19);" text="We are glad you have decided to register and become part of our family&#10;Please choose the account type you like in order to continue" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Cambria Bold" size="36.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+         </children>
+      </HBox>
+      <Pane layoutX="330.0" layoutY="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <VBox fx:id="basicVB" alignment="CENTER" layoutX="305.0" style="-fx-background-color: #FFD700; -fx-background-radius: 70;">
+               <children>
+                  <ImageView fitHeight="180.0" fitWidth="180.0" onMouseClicked="#handleBasicMemberShip" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Image/basicPlan.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox fx:id="goldVB" alignment="CENTER" layoutX="565.0" prefHeight="180.0" prefWidth="180.0" style="-fx-background-color: #FFD700; -fx-background-radius: 70;">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="150.0" onMouseClicked="#handleGoldMemberShip" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Image/goldPlan.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox fx:id="eliteVB" alignment="CENTER" layoutX="825.0" prefHeight="180.0" prefWidth="180.0" style="-fx-background-color: #FFD700; -fx-background-radius: 70;">
+               <children>
+                  <ImageView fitHeight="160.0" fitWidth="160.0" onMouseClicked="#handleEliteMemberShip" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Image/elitePlan.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </VBox>
+            <HBox alignment="CENTER" layoutX="37.5" layoutY="79.0">
+               <children>
+                  <Label fx:id="errorLabel1" alignment="CENTER" contentDisplay="CENTER" prefWidth="230.0" style="-fx-text-fill: linear-gradient(to right, #ed213a, #93291e);" text="Please choose account type" textAlignment="CENTER" textFill="RED" visible="false">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <Reflection />
+                     </effect>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" layoutX="1037.5" layoutY="79.0">
+               <children>
+                  <Label fx:id="errorLabel2" alignment="CENTER" contentDisplay="CENTER" prefWidth="230.0" style="-fx-text-fill: linear-gradient(to right, #ed213a, #93291e);" text="Please choose account type" textAlignment="CENTER" textFill="RED" visible="false">
+                     <font>
+                        <Font name="Cambria Bold" size="18.0" />
+                     </font>
+                     <effect>
+                        <Reflection />
+                     </effect>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+      <Pane layoutY="400.0" prefHeight="150.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label layoutX="60.0" layoutY="5.0" style="-fx-text-fill: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);" text="Price" textFill="#847979">
+               <font>
+                  <Font name="Cambria Bold" size="24.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+            <Separator layoutY="45.0" opacity="0.4" prefWidth="1300.0">
+               <effect>
+                  <MotionBlur />
+               </effect>
+            </Separator>
+            <Label layoutX="39.0" layoutY="55.0" style="-fx-text-fill: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);" text="All Shops" textFill="#847979">
+               <font>
+                  <Font name="Cambria Bold" size="24.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+            <Separator layoutY="95.0" opacity="0.4" prefWidth="1300.0">
+               <effect>
+                  <MotionBlur />
+               </effect>
+            </Separator>
+            <Label layoutX="41.0" layoutY="105.0" style="-fx-text-fill: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);" text="Discount" textFill="#847979">
+               <font>
+                  <Font name="Cambria Bold" size="24.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+            <Label fx:id="basicPrice" layoutX="365.0" layoutY="5.0" text="0.00₪" textFill="#847979">
+               <font>
+                  <Font name="Cambria" size="24.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+            <Label fx:id="goldPrice" layoutX="630.0" layoutY="5.0" text="0.00₪" textFill="#847979">
+               <font>
+                  <Font name="Cambria" size="24.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+            <Label fx:id="elitePrice" layoutX="840.0" layoutY="5.0" text="100.00₪ / Year" textFill="#847979">
+               <font>
+                  <Font name="Cambria" size="24.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="644.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/trueIcon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="902.0" layoutY="55.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/trueIcon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="379.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/xIcon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="644.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/xIcon.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="eliteDiscount" layoutX="767.0" layoutY="105.0" text="10% for orders above 50.00₪" textFill="#847979">
+               <font>
+                  <Font name="Cambria" size="24.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+            <ImageView fx:id="basicXImage" fitHeight="30.0" fitWidth="30.0" layoutX="379.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Image/xIcon.png" />
+               </image>
+            </ImageView>
+            <MFXComboBox fx:id="chooseShopCB" floatingText="Choose Shop" layoutX="335.0" layoutY="51.0" onMouseClicked="#handleChooseShopCB">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </MFXComboBox>
+         </children>
+      </Pane>
+      <HBox alignment="CENTER" layoutY="550.0" prefHeight="100.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXButton onAction="#handleNextPage" prefHeight="50.0" prefWidth="250.0" style="-fx-background-color: linear-gradient(to right, #cb2d3e, #ef473a); -fx-background-radius: 100; -fx-text-fill: linear-gradient(to right, #c9d6ff, #e2e2e2);" text="NEXT PAGE" textFill="#dad6d6">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
